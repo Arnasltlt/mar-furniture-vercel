@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from '../styles/Footer.module.css';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.kojelis}>
       <div className={styles.container}>
@@ -21,16 +22,24 @@ const Footer = () => {
             <h5>Nuorodos</h5>
             <ul className={styles.list}>
               <li>
-                <a href="/">Pagrindinis</a>
+                <Link href="/home">
+                  <a>Pagrindinis</a>
+                </Link>
               </li>
               <li>
-                <a href="/">Apie mane</a>
+                <Link href="/about">
+                  <a>Apie mane</a>
+                </Link>
               </li>
               <li>
-                <a href="/">Nestandartinių baldų gamyba</a>
+                <Link href="/custom-furniture">
+                  <a>Nestandartinių baldų gamyba</a>
+                </Link>
               </li>
               <li>
-                <a href="/privatumas">Privatumas</a>
+                <Link href="/privacy">
+                  <a>Privatumas</a>
+                </Link>
               </li>
             </ul>
           </div>
