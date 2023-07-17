@@ -55,12 +55,22 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories = await getFurnitureCategories();
 
-  const paths = categories.map((category) => ({
-    params: { category: category?.code?.toLowerCase() }, // Add conditional check for category.code
-  }));
+  const paths = categories.map((category) => {
+    if (typeof category?.code === "string") {
+      return {
+        params: { category: category.code.toLowerCase() },
+      };
+    } else {
+      // Handle the case where code is not a string
+      return {
+        params: { category: "" },
+      };
+    }
+  });
 
   return { paths, fallback: false };
 };
+
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const categoryCode = context.params?.category as string; // Add conditional check for context.params.category
