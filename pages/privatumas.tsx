@@ -4,7 +4,7 @@ import Header from '../components/Header'; // adjust the import path
 const PrivacyPolicy: React.FC = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <h1>Privatumo politika</h1>
       <p>
         {'Sveiki atvykę į Mar-furniture! Mes įsipareigojame saugoti jūsų privatumą, todėl šiame pranešime pateikiame informaciją apie tai, kaip rinkti, naudoti ir saugoti jūsų duomenis, kai lankotės mūsų svetainėje.'}
@@ -25,9 +25,9 @@ const PrivacyPolicy: React.FC = () => {
       <p>
         {'Mūsų svetainėje gali būti nuorodų į kitas svetaines, kurių mes nekontroliuojame. Jei paspausite ant trečiosios šalies nuorodos, jūs būsite nukreiptas į trečiosios šalies svetainę. Mes primygtinai rekomenduojame perskaityti privatumo politiką kiekvienoje svetainėje, kurioje lankotės.'}
       </p>
-      <h2>Mar-furniture.lt naudoja „Google AdWords“ reklamavimą</h2>
+      <h2>Mar-furniture.lt naudoja &quot;Google AdWords&quot; reklamavimą</h2>
       <p>
-        {'Mar-furniture.lt naudoja "Google AdWords" reklamavimo platformą, kad būtų galima pateikti personalizuotą reklamą savo svetainės lankytojams. Tai reiškia, kad gali būti, jog mes reklamuojame mūsų svetainėje tiekiamas paslaugas ar prekes tiems, kurie mūsų svetainę jau yra aplankę, bet nėra pabaigę kokio nors veiksmo, pvz., užpildę užklausos formą. Visi duomenys, kurie yra renkami per šį procesą, yra tvarkomi pagal mūsų ir "Google" privatumo politiką.'}
+        {'Mar-furniture.lt naudoja &quot;Google AdWords&quot; reklamavimo platformą, kad būtų galima pateikti personalizuotą reklamą savo svetainės lankytojams. Tai reiškia, kad gali būti, jog mes reklamuojame mūsų svetainėje tiekiamas paslaugas ar prekes tiems, kurie mūsų svetainę jau yra aplankę, bet nėra pabaigę kokio nors veiksmo, pvz., užpildę užklausos formą. Visi duomenys, kurie yra renkami per šį procesą, yra tvarkomi pagal mūsų ir &quot;Google&quot; privatumo politiką.'}
       </p>
       <h2>Statistika</h2>
       <p>
