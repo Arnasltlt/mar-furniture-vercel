@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createUzklausimai } from '../lib/airtable';
+import { createUzklausimai } from '../lib/airtableForm';
 
 const ContactForm = () => {
   const [vardas, setVardas] = useState('');
