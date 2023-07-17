@@ -5,7 +5,7 @@ import Airtable from 'airtable';
 export default async function handler(req, res) {
   try {
     const { vardas, uzklausa, email } = req.body;
-    const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE);
+    const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appcYcJWTWr6eedym');
 
     base('Uzklausimai').create([
       {

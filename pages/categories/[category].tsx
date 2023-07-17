@@ -49,21 +49,21 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories = await getFurnitureCategories();
 
   const paths = categories.map((category) => ({
-    params: { category: category.code.toLowerCase() },
+    params: { category: category?.code?.toLowerCase() }, // Add conditional check for category.code
   }));
 
   return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const categoryCode = context.params!.category as string;
+  const categoryCode = context.params?.category as string; // Add conditional check for context.params.category
   const products = await getProductsByCategory(categoryCode);
 
   return {

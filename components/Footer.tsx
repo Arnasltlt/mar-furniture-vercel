@@ -22,24 +22,16 @@ const Footer: React.FC = () => {
             <h5>Nuorodos</h5>
             <ul className={styles.list}>
               <li>
-                <Link href="/home">
-                  <a>Pagrindinis</a>
-                </Link>
+                <Link href="/home">Pagrindinis</Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a>Apie mane</a>
-                </Link>
+                <Link href="/about">Apie mane</Link>
               </li>
               <li>
-                <Link href="/custom-furniture">
-                  <a>Nestandartinių baldų gamyba</a>
-                </Link>
+                <Link href="/custom-furniture">Nestandartinių baldų gamyba</Link>
               </li>
               <li>
-                <Link href="/privacy">
-                  <a>Privatumas</a>
-                </Link>
+                <Link href="/privacy">Privatumas</Link>
               </li>
             </ul>
           </div>
