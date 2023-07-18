@@ -4,7 +4,7 @@ import Airtable from 'airtable';
 
 export default async function handler(req, res) {
   try {
-    const { vardas, uzklausa, email } = req.body;
+    const { vardas, uzklausa, email, iskur } = req.body;
     const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appcYcJWTWr6eedym');
 
     base('Uzklausimai').create([
@@ -12,7 +12,8 @@ export default async function handler(req, res) {
         "fields": {
           "Vardas": vardas,
           "Uzklausa": uzklausa,
-          "email": email
+          "email": email,
+          "iskur": iskur
         }
       }
     ], function(err, response) {
@@ -33,4 +34,3 @@ export default async function handler(req, res) {
     res.status(500).json({ message: 'An unexpected error occurred' });
   }
 }
-
