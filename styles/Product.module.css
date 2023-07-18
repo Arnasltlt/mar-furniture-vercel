@@ -16,9 +16,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center; /* Center the content vertically */
   width: 100%;
 }
+
 
 .gallery {
   width: 45%; /* Adjust as needed */
@@ -26,8 +27,15 @@
 
 .description {
   padding: 1rem;
-  width: 45%; /* Adjust as needed */
+  width: 45%;
 }
+
+.form {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem; /* add some margin to create space between the description and form */
+}
+
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {

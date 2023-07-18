@@ -4,6 +4,8 @@ import ImageGallery from 'react-image-gallery';
 import styles from '../../styles/Product.module.css';
 import Header from '../../components/Header'; // Import Header component
 import Footer from '../../components/Footer';
+import ContactForm from '../../components/ContactForm';
+
 
 const ProductPage = ({ product }) => {
   const images = product.gallery.map(img => ({
@@ -20,6 +22,12 @@ const ProductPage = ({ product }) => {
           <ImageGallery items={images} />
         </div>
         <div className={styles.description} dangerouslySetInnerHTML={{ __html: product.description }} />
+      </div>
+      <div className={styles.form}>
+        <ContactForm header="Klausti kainos" 
+        buttonText="Klausti" 
+        formDescription="Baldai yra vienetiniai ir gaminami individualiai, todėl pagal poreikį juos galima koreguoti."
+        apiPath="/api/createUzklausimai" />
       </div>
       <Footer />
     </div>
