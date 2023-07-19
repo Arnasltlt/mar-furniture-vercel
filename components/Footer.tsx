@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/Footer.module.css';
+import CookieConsentBanner from './CookieConsentBanner';
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.kojelis}>
+      <CookieConsentBanner />
       <div className={styles.container}>
         <div className={styles.row}>
           <div className={styles.column}>
