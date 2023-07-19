@@ -11,7 +11,7 @@ const StickyBar: React.FC = () => {
           <Image src="/../public/f.png" alt="facebook" width={24} height={24} />
         </a>
         <a href="https://www.instagram.com/marfurniture/" target="_blank" rel="noopener noreferrer">
-          <Image src="/../public/i.png" alt="instagram" width={24} height={24} />
+          <Image src="i.png" alt="instagram" width={24} height={24} />
         </a>
       </div>
       <div className={styles.contactInfo}>
@@ -24,10 +24,10 @@ const StickyBar: React.FC = () => {
       </div>
       <div className={styles.socialLinks}>
         <a href="https://www.etsy.com/shop/MarFurniture" target="_blank" rel="noopener noreferrer">
-          <Image src="/../public/bag.png" alt="etsy" width={24} height={24} />
+          <Image src="bag.png" alt="etsy" width={24} height={24} />
         </a>
         <Link href="/info">
-          <Image src="/../public/info.png" alt="info" width={24} height={24} />
+          <Image src="info.png" alt="info" width={24} height={24} />
         </Link>
       </div>
     </div>
