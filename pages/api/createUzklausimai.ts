@@ -4,7 +4,7 @@ import Airtable from 'airtable';
 
 export default async function handler(req, res) {
   try {
-    const { vardas, uzklausa, email, iskur } = req.body;
+    const { vardas, uzklausa, email, iskur, subscribe } = req.body; // Extract subscribe from the request body
     const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appcYcJWTWr6eedym');
 
     base('Uzklausimai').create([
@@ -13,7 +13,8 @@ export default async function handler(req, res) {
           "Vardas": vardas,
           "Uzklausa": uzklausa,
           "email": email,
-          "iskur": iskur
+          "iskur": iskur,
+          "Subscription": subscribe // Add the subscription value to the Airtable
         }
       }
     ], function(err, response) {

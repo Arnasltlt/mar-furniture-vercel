@@ -14,6 +14,7 @@ export default function ContactForm({ header, buttonText, apiPath, formDescripti
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
+  const [checkboxState, setCheckboxState] = useState(false); // move this line inside the component
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -24,7 +25,8 @@ export default function ContactForm({ header, buttonText, apiPath, formDescripti
       vardas,
       uzklausa,
       email,
-      iskur: window.location.href // This will be the full URL of the current page
+      iskur: window.location.href, // This will be the full URL of the current page
+      subscribe: checkboxState // Add this line
     };
     
     try {
@@ -41,6 +43,7 @@ export default function ContactForm({ header, buttonText, apiPath, formDescripti
       setVardas('');
       setUzklausa('');
       setEmail('');
+      setCheckboxState(false); // reset checkbox state
       setSubmissionMessage('Ačiū už užklausą! Susisieksiu kiek galiu greičiau!');
       
     } catch (error) {
@@ -56,14 +59,20 @@ export default function ContactForm({ header, buttonText, apiPath, formDescripti
       <h2 className={styles.formHeader}>{header}</h2>
       <p className={styles.formDescription}>{formDescription}</p>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <input type="text" placeholder="Vardas" value={vardas} onChange={(e) => setVardas(e.target.value)} required />
-        <textarea placeholder="Užklausa" rows={5} value={uzklausa} onChange={(e) => setUzklausa(e.target.value)} required />
-        <input type="email" placeholder="El. paštas" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Submitting...' : buttonText}
-        </button>
+          <input type="text" placeholder="Vardas" value={vardas} onChange={(e) => setVardas(e.target.value)} required />
+          <textarea placeholder="Užklausa" rows={5} value={uzklausa} onChange={(e) => setUzklausa(e.target.value)} required />
+          <input type="email" placeholder="El. paštas" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <p className={styles.formDescription}><i>Jūsų vardas ir el. pašto adresas bus naudojami tik norint atsakyti į jūsų užklausą.</i></p>
+          <div className={styles.checkboxContainer}>
+              <input type="checkbox" checked={checkboxState} onChange={(e) => setCheckboxState(e.target.checked)} />
+              <label>Noriu pirmas išgirsti apie mar-furniture baldus/naujienas.</label>
+          </div>
+          <button type="submit">{buttonText}</button>
       </form>
+
+  
       {submissionMessage && <p className={styles.submissionMessage}>{submissionMessage}</p>}
     </div>
   );
+  
 }

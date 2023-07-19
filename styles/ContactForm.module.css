@@ -1,34 +1,35 @@
 .formContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; /* center align the form */
+    align-items: center;
     padding: 5em;
-  }
+}
 
 .formDescription {
     text-align: center;
-    max-width: 500px; /* limit the width to the same as the form */
-    margin-bottom: 1em; /* add some space before the form */
-  }
-  
+    max-width: 500px;
+    margin-bottom: 1em;
+    color: #6c757d; /* made it a bit gray */
+    font-size: 0.9em; /* made it a bit smaller */
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    gap: 1em; /* adds space between form fields */
+    gap: 1em;
     width: 100%;
-    max-width: 500px; /* you can adjust this */
-  }
+    max-width: 500px;
+}
 
-  
-  .form input, .form textarea {
+.form input, .form textarea {
     padding: 0.5em;
     font-size: 1em;
     border-radius: 4px;
     border: 1px solid #ccc;
     width: 100%;
-  }
-  
-  .form button {
+}
+
+.form button {
     padding: 0.5em 1em;
     font-size: 1em;
     background-color: #444a50;
@@ -36,13 +37,25 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%; /* changed width from fit-content to 100% */
+    width: 100%;
 }
 
-  
-  .formHeader {
+.formHeader {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 1em;
-  }
-  
+}
+
+.checkboxContainer {
+    display: grid;
+    grid-template-columns: min-content auto; /* Let the checkbox take as much space as it needs and the rest is allocated for the text */
+    gap: 0.5em; /* Add a small space between the checkbox and the text */
+}
+
+.checkboxContainer input[type="checkbox"] {
+    grid-column: 1; /* Place the checkbox in the first grid column */
+}
+
+.checkboxContainer label {
+    grid-column: 2; /* Place the label in the second grid column */
+}
