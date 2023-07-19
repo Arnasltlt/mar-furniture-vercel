@@ -1,5 +1,5 @@
 .kojelis {
-  padding: 20px;
+  padding: 0px;
   background-color: #808080;
   color: #fff;
   font-family: Arial, sans-serif;
@@ -8,11 +8,11 @@
   width:100%;
 }
 
-
-
 .container {
-  max-width: 960px;
   margin: 0 auto;
+  max-width: 100%; /* make the container take up 100% width of the viewport */
+  padding: 0 20px; /* add some padding to the sides so the content doesn't touch the edges of the screen */
+  box-sizing: border-box;
 }
 
 .row {
@@ -22,7 +22,8 @@
 
 .column {
   flex: 1;
-  padding: 0 15px;
+  padding: 25px 25px;
+  margin-bottom: 5em;
 }
 
 .column h5 {
@@ -53,3 +54,4 @@
 .list li {
   margin-bottom: 10px;
 }
+

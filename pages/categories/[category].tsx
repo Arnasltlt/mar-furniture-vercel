@@ -37,8 +37,8 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
-                  width={150} // specify your image dimensions
-                  height={150}
+                  width={100} // specify your image dimensions
+                  height={100}
                 />
                 <h3>{product.name}</h3>
               </div>

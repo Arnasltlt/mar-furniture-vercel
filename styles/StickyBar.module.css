@@ -1,0 +1,41 @@
+/* styles/StickyBar.module.css */
+
+.stickyBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #aeacac;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contactInfo a,
+  .socialLinks a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactInfo,
+  .socialLinks {
+    display: flex;
+    gap: 15px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .contactInfo a,
+    .socialLinks a {
+      gap: 5px;
+    }
+  
+    .contactInfo,
+    .socialLinks {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+

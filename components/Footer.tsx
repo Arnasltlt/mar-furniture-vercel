@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/Footer.module.css';
 import CookieConsentBanner from './CookieConsentBanner';
+import StickyBar from './StickyBar';  // Make sure to import the StickyBar component
 
 const Footer: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+      <StickyBar />  {/* Add the StickyBar component here */}
     </footer>
   );
 };

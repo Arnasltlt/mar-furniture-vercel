@@ -37,8 +37,8 @@ const Home: NextPage<IHomeProps> = ({ furnitureCategories }) => {
                 <Image
                   src={category.imageUrl}
                   alt={category.name}
-                  width={150}
-                  height={150}
+                  width={100}
+                  height={100}
                 />
                 <h3>{category.name}</h3>
               </div>
