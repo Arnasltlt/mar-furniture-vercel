@@ -8,7 +8,7 @@ const StickyBar: React.FC = () => {
     <div className={styles.stickyBar}>
       <div className={styles.socialLinks}>
         <a href="http://www.facebook.com/marfurnitureblog" target="_blank" rel="noopener noreferrer">
-          <Image src="/../public/f.png" alt="facebook" width={24} height={24} />
+          <Image src="f.png" alt="facebook" width={24} height={24} />
         </a>
         <a href="https://www.instagram.com/marfurniture/" target="_blank" rel="noopener noreferrer">
           <Image src="i.png" alt="instagram" width={24} height={24} />
