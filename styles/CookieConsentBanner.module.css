@@ -11,6 +11,7 @@
     border-top: 1px solid #ddd;
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
+    color: #333;
   }
   
   .cookie-banner.entering {
