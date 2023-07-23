@@ -1,11 +1,12 @@
 .kojelis {
   padding: 0px;
-  background-color: #b4b2b2cb;
+  background-color: #b4b2b2;
   color: #fff;
   font-family: Arial, sans-serif;
   flex-shrink: 0;
   margin-top: 200px; /* Adjust this value to control how far down the footer appears */
   width:100%;
+  z-index: 20;
 }
 
 .container {

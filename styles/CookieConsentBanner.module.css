@@ -12,6 +12,7 @@
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
     color: #333;
+    z-index: 500;
   }
   
   .cookie-banner.entering {
