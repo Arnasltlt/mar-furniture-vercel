@@ -38,7 +38,7 @@
 
 
 /* Responsive styles for smaller screens */
-@media (max-width: 3500px) {
+@media (max-width: 1200px) {
   .content {
     flex-direction: column;
     align-items: center;

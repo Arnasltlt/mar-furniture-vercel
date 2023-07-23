@@ -44,3 +44,8 @@
   color: #0070f3;
   border-color: #0070f3;
 }
+
+.categoryName {
+  font-size: 16px; /* Adjust the size as needed */
+  font-weight: normal; /* "normal" is usually equivalent to a weight of 400 */
+}

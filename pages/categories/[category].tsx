@@ -40,7 +40,7 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
                   width={100} // specify your image dimensions
                   height={100}
                 />
-                <h3>{product.name}</h3>
+                <h4 className={styles.categoryName}>{product.name}</h4>
               </div>
             </Link>
           ))}
