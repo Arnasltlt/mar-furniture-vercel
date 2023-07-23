@@ -45,7 +45,6 @@ const Category: NextPage<ICategoryProps> = ({ products, categoryName }) => {
               </div>
             </Link>
           ))}
-          
         </div>
       </main>
 
@@ -72,11 +71,22 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-
 export const getStaticProps: GetStaticProps = async (context) => {
-  const categoryCode = context.params?.category as string;
+  if (!context.params) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const categoryCode = context.params.category;
   const products = await getProductsByCategory(categoryCode);
   const category = await getCategoryByKodas(categoryCode);
+
+  if (!products || !category) {
+    return {
+      notFound: true,
+    };
+  }
 
   return {
     props: {
@@ -87,4 +97,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default Category;
+export default Category; // Added this line

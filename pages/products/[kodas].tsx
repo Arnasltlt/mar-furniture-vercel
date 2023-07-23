@@ -16,7 +16,8 @@ const ProductPage = ({ product }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{product.name} - Mar-Furniture</title> // Use product name here
+        {/* Use product name here */}
+        <title>{product.name} - Mar-Furniture</title>
         <meta name="description" content={product.name} />
       </Head>
       <Header />
