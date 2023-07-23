@@ -1,11 +1,10 @@
 import type { NextPage, GetServerSideProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { getFurnitureCategories } from '../lib/airtable';
 import Header from '../components/Header';
-import Footer from '../components/Footer';// import Header here
+import Footer from '../components/Footer'; // import Footer here
 
 interface IFurnitureCategory {
   id: string;
@@ -27,18 +26,17 @@ const Home: NextPage<IHomeProps> = ({ furnitureCategories }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />   {/* Use Header component here */}
+      <Header />
 
       <main className={styles.mainContent}>
         <div className={styles.grid}>
           {furnitureCategories.map(category => (
             <Link href={`/categories/${category.code}`} key={category.id} passHref>
               <div className={styles.card}>
-                <Image
+                <img
                   src={category.imageUrl}
                   alt={category.name}
-                  width={100}
-                  height={100}
+                  style={{width: "100px", height: "100px"}}
                 />
                 <h4 className={styles.categoryName}>{category.name}</h4>
               </div>
@@ -46,6 +44,7 @@ const Home: NextPage<IHomeProps> = ({ furnitureCategories }) => {
           ))}
         </div>
       </main>
+
       <Footer />
     </div>
   )
