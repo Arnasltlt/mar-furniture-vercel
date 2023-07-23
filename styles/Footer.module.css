@@ -1,6 +1,6 @@
 .kojelis {
   padding: 0px;
-  background-color: #808080;
+  background-color: #b4b2b2cb;
   color: #fff;
   font-family: Arial, sans-serif;
   flex-shrink: 0;
@@ -54,4 +54,3 @@
 .list li {
   margin-bottom: 10px;
 }
-

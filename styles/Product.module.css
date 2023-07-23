@@ -1,7 +1,7 @@
 /* styles/Product.module.css */
 
 .container {
-  padding: 1rem;
+  padding: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@
 
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 3500px) {
   .content {
     flex-direction: column;
     align-items: center;

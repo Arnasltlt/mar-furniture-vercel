@@ -40,7 +40,7 @@ const Home: NextPage<IHomeProps> = ({ furnitureCategories }) => {
                   width={100}
                   height={100}
                 />
-                <h3>{category.name}</h3>
+                <h4 className={styles.categoryName}>{category.name}</h4>
               </div>
             </Link>
           ))}
