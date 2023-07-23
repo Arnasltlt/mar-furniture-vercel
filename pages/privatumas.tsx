@@ -33,7 +33,7 @@ const PrivacyPolicy: React.FC = () => {
       <p>
         {'Mar-furniture gali rinkti informaciją apie svetainės lankytojų elgesį ir naudojimąsi svetaine. Ši informacija gali būti viešinama arba perduodama trečiosioms šalims. Tačiau mes neskelbiame asmeniškai identifikuojamos informacijos.'}
       </p>
-      <h2>Affiliate Disclosure</h2>
+      <h2>Partnerystes Rinkodara</h2>
       <p>
         {'Ši svetainė naudoja partnerystės nuorodas ir gauna komisinius iš pardavimų, atliktų per šias nuorodas. Mūsų tikslas - pateikti objektyvią ir tikslią informaciją, tačiau vartotojai turėtų atsižvelgti į tai, kad mes gauname komisinius už kai kuriuos pardavimus, atliktus per nuorodas šioje svetainėje.'}
       </p>

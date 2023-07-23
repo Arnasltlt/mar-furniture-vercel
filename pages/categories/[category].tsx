@@ -2,9 +2,9 @@ import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../../styles/Home.module.css';
-import { getProductsByCategory, getFurnitureCategories } from '../../lib/airtable';
+import { getProductsByCategory, getFurnitureCategories, getCategoryByKodas } from '../../lib/airtable';
 import Link from 'next/link';
-import Header from '../../components/Header'; // adjust the import path
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 interface IProduct {
@@ -16,18 +16,19 @@ interface IProduct {
 
 interface ICategoryProps {
   products: IProduct[];
+  categoryName: string;
 }
 
-const Category: NextPage<ICategoryProps> = ({ products }) => {
+const Category: NextPage<ICategoryProps> = ({ products, categoryName }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Products by Category</title>
-        <meta name="description" content="List of products by category" />
+        <title>Mar-Furniture {categoryName}</title>
+        <meta name="description" content={`List of ${categoryName} products`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />   {/* Include Header component here */}
+      <Header />
 
       <main className={styles.main}>
         <div className={styles.grid}>
@@ -37,7 +38,7 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
                 <Image
                   src={product.imageUrl}
                   alt={product.name}
-                  width={100} // specify your image dimensions
+                  width={100}
                   height={100}
                 />
                 <h4 className={styles.categoryName}>{product.name}</h4>
@@ -47,6 +48,7 @@ const Category: NextPage<ICategoryProps> = ({ products }) => {
           
         </div>
       </main>
+
       <Footer />
     </div>
   );
@@ -61,7 +63,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
         params: { category: category.code.toLowerCase() },
       };
     } else {
-      // Handle the case where code is not a string
       return {
         params: { category: "" },
       };
@@ -73,14 +74,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const categoryCode = context.params?.category as string; // Add conditional check for context.params.category
+  const categoryCode = context.params?.category as string;
   const products = await getProductsByCategory(categoryCode);
+  const category = await getCategoryByKodas(categoryCode);
 
   return {
     props: {
       products,
+      categoryName: category.name,
     },
-    revalidate: 60 * 60 * 24, // This will regenerate the page once per day
+    revalidate: 60 * 60 * 24,
   };
 };
 

@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next';
 import { getProductByKodas } from '../../lib/airtable';
 import ImageGallery from 'react-image-gallery';
+import Head from 'next/head';
 import styles from '../../styles/Product.module.css';
-import Header from '../../components/Header'; // Import Header component
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import ContactForm from '../../components/ContactForm';
-
 
 const ProductPage = ({ product }) => {
   const images = product.gallery.map(img => ({
@@ -15,7 +15,11 @@ const ProductPage = ({ product }) => {
 
   return (
     <div className={styles.container}>
-      <Header /> {/* Include Header component here */}
+      <Head>
+        <title>{product.name} - Mar-Furniture</title> // Use product name here
+        <meta name="description" content={product.name} />
+      </Head>
+      <Header />
       <h1 className={styles.title}>{product.name}</h1>
       <div className={styles.content}>
         <div className={styles.gallery}>

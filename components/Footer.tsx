@@ -25,16 +25,16 @@ const Footer: React.FC = () => {
             <h5>Nuorodos</h5>
             <ul className={styles.list}>
               <li>
-                <Link href="/home">Pagrindinis</Link>
+                <Link href="/">Pagrindinis</Link>
               </li>
               <li>
-                <Link href="/about">Apie mane</Link>
+                <Link href="/info">Apie mane</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/custom-furniture">Nestandartinių baldų gamyba</Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="/privacy">Privatumas</Link>
+                <Link href="/privatumas">Privatumas</Link>
               </li>
             </ul>
           </div>

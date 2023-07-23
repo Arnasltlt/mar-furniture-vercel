@@ -22,7 +22,7 @@ const Home: NextPage<IHomeProps> = ({ furnitureCategories }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Furniture Portfolio</title>
+        <title>Mar Furniture | Nestandartinių baldų dizaineris</title>
         <meta name="description" content="A portfolio of our furniture" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
