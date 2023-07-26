@@ -16,10 +16,10 @@ const StickyBar: React.FC = () => {
       </div>
       <div className={styles.contactInfo}>
         <a href="tel:+37068423255">
-          +37068423255
+          +37068423255 
         </a>
         <a href="mailto:Marius@mar-furniture.lt">
-          Marius@mar-furniture.lt
+          Marius@mar-furniture.lt 
         </a>
       </div>
       <div className={styles.socialLinks}>
