@@ -35,7 +35,7 @@ const Category: NextPage<ICategoryProps> = ({ products, categoryName }) => {
           {products.map(product => (
             <Link href={`/products/${product.kodas}`} key={product.id} passHref>
               <div className={styles.card}>
-                <Image
+                <img
                   src={product.imageUrl}
                   alt={product.name}
                   width={100}
