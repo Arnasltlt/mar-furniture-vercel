@@ -15,12 +15,8 @@ const StickyBar: React.FC = () => {
         </a>
       </div>
       <div className={styles.contactInfo}>
-        <a href="tel:+37068423255">
-          +37068423255 
-        </a>
-        <a href="mailto:Marius@mar-furniture.lt">
-          Marius@mar-furniture.lt 
-        </a>
+      <a href="tel:+37068423255">+370 684 232 55</a>
+      <a href="mailto:Marius@mar-furniture.lt">Marius@mar-furniture.lt</a>
       </div>
       <div className={styles.socialLinks}>
         <a href="https://www.etsy.com/shop/MarFurniture" target="_blank" rel="noopener noreferrer">
