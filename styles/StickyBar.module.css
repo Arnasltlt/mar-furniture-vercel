@@ -39,3 +39,6 @@
     }
   }
 
+  .contactInfo a:not(:last-child) {
+    margin-right: 5px; /* Adjust the value as needed */
+  }
